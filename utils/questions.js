@@ -76,5 +76,5 @@ const prompts = [
     ];
     
     module.exports = {
-      prompts: prompts,
+      questions: questions,
     };

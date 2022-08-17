@@ -32,16 +32,16 @@ const prompts = [
     {
         type: "list",
         name: "license",
-        message: "Select the appropiate license"
+        message: "Select the appropiate license.",
         choices: [
-            "GNU AGPLv3",
-            "GNU GPLv3",
-            "GNU LGPLv3",
-            "Mozilla",
-            "MIT",
-            "Apache",
-            "Boost",
-        ]
+          "GNU AGPLv3",
+          "GNU GPLv3",
+          "GNU LGPLv3",
+          "Mozilla",
+          "MIT",
+          "Apache",
+          "Boost",
+        ],
     },
     {
         type: "input",

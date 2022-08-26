@@ -1,23 +1,12 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(answers) {
   return `
   
-# ${data.title}
-  ${data.description}
-  ${data.licenseBadge}
-  [A deployed version can be viewed here.](${data.URL})
+# ${answers.title}
+  ${answers.description}
+  ${answers.licenseBadge}
+  [A deployed version can be viewed here.](${answers.URL})
   
 ---
 ## Contents
@@ -33,7 +22,7 @@ function generateMarkdown(data) {
     6. [Authors and acknowledgment](#authors%20and%20acknowledgment)
     ---
     ## About
-      ${data.about}
+      ${answers.about}
     ---
     ## User Story
       
@@ -47,15 +36,15 @@ function generateMarkdown(data) {
     ![]()
 ---
 ## Installation:
-  ${data.installation}
+  ${answers.installation}
   To clone the repo:
   
-      git clone ${data.clone}
+      git clone ${answers.clone}
   
 ---
 
 ## License
-  License used for this project - ${data.license}
+  License used for this project - ${answers.license}
   * For more information on license types, please reference this website
   for additional licensing information - [https: //choosealicense.com/](https://choosealicense.com/).
 
@@ -75,10 +64,10 @@ function generateMarkdown(data) {
 ---
 
 ## Tests:
-  ${data.test}
+  ${answers.test}
 ---
 ## Authors and Acknowledgments
-  ${data.author}
+  ${answers.author}
 ---
 ## Contact Information:
 * GitHub Username: ${data.userName}

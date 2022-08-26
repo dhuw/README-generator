@@ -79,6 +79,15 @@ function promptUser() {
           name: "repo",
           message: "What is the URL of the github repo?",
         },
-      ];
-  ])
+  ]);
 }
+
+//async function 
+async function init() {
+  try {
+    const answers = await promptUser();
+    const generateContent = generateReadme(answers);
+    await writeFileAsync(./dist/README.md)
+  }
+}
+

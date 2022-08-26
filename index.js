@@ -2,22 +2,83 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-//connects other files together
-const generateMarkdown = require("./utils/generateMarkdown");
-const licenseBadge = require("./utils/licenseBadge").licenseBadge;
-const questions = require("./utils/questions").questions;
-//allows async for func
-const writeFileAsync = util.promisify(fs.writeFile);
-//init and create .md readme file
-async function init() {
-    try {
-      const answers = await inquirer.prompt(questions);
-      answers.licenseBadge = licenseBadge(answers.license);
-      let readMeData = generateMarkdown(answers);
-      await writeFileAsync("created-README.md", readMeData);
-    } catch (err) {
-      throw err;
-    }
-  }
-//initialize program
-  init();
+
+function promptUser() {
+  return inquirer.prompt([
+      {
+          type: "input",
+          name: "title",
+          message: "What is the title of your project?"
+      },
+      {
+          type: "input",
+          name: "desc",
+          message: "Use one sentence to describe your project."
+      },
+      {
+          type: "input",
+          name: "about",
+          message: "Tell me more about the project."
+      },
+      {
+          type: "input",
+          name: "about",
+          message: "Tell me more about the project."
+      },
+      {
+          type: "input",
+          name: "install",
+          message: "What are the installation instructions?"
+      },
+      {
+          type: "input",
+          name: "clone",
+          message: "What is the url to clone the repo?"
+      },
+      {
+          type: "list",
+          name: "license",
+          message: "Select the appropiate license.",
+          choices: [
+            "GNU AGPLv3",
+            "GNU GPLv3",
+            "GNU LGPLv3",
+            "Mozilla",
+            "MIT",
+            "Apache",
+            "Boost",
+          ],
+      },
+      {
+          type: "input",
+          name: "test",
+          message: "Enter the testing methods used in the project."
+      },
+      {
+          type: "input",
+          name: "creator",
+          message: "What is your name?"
+      },
+      {
+          type: "input",
+          name: "userName",
+          message: "What is your gitHub username?"
+      },
+      {
+          type: "input",
+          name: "userEmail",
+          message: "What is your email?",
+        },
+        {
+          type: "input",
+          name: "URL",
+          message: "What is the URL of the live site?",
+        },
+        {
+          type: "input",
+          name: "repo",
+          message: "What is the URL of the github repo?",
+        },
+      ];
+  ])
+}

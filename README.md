@@ -1,72 +1,35 @@
 
   
-# Readme Generator
-  undefined
-  undefined
-  [A deployed version can be viewed here.]()
+  <h1 align="center">undefined 👋</h1>
   
----
-## Contents
-1. [About](#about)
-    1. [User Story](#user%20story)
-    2. [Acceptance criteria](#acceptance%20criteria)
-    3. [Visuals](#visuals)
-    4. [Build](#build)
-2. [Installation](#installation)
-    3. [License](#license)
-    4. [Contributing](#contributing)
-    5. [Tests](#tests)
-    6. [Authors and acknowledgment](#authors%20and%20acknowledgment)
-    ---
-    ## About
-      With the given answers the program will produce an organized and licensed README file for your GitHub repo.
-    ---
-    ## User Story
+  ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
+  ## Description
+  🔍 undefined
+  ## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+  ## Installation
+  💾 undefined
+  ## Usage
+  💻 undefined
+  ## License
+  ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
+  <br />
+  This application is covered by the MIT license. 
+  ## Contributing
+  👪 undefined
+  ## Tests
+  ✏️ undefined
+  ## Questions
+  ✋ undefined<br />
+  <br />
+  :octocat: Find me on GitHub: [undefined](https://github.com/undefined)<br />
+  <br />
+  ✉️ Email me with any questions: undefined<br /><br />
+  _This README was generated with ❤️ by [README-generator](https://github.com/jpd61/README-generator) 🔥🔥🔥_
       
-    ---
-    ## Acceptance Criteria
-      
-      
-    ---
-    ## Visuals:
-
-    ![]()
----
-## Installation:
-  undefined
-  To clone the repo:
-  
-      git clone 
-  
----
-
-## License
-  License used for this project - undefined
-  * For more information on license types, please reference this website
-  for additional licensing information - [https: //choosealicense.com/](https://choosealicense.com/).
-
----
-
-## Contributing:
-  
-  To contribute to this application, create a pull request.
-  Here are the steps needed for doing that:
-  - Fork the repo
-  - Create a feature branch (git checkout -b NAME-HERE)
-  - Commit your new feature (git commit -m 'Add some feature')
-  - Push your branch (git push)
-  - Create a new Pull Request
-  Following a code review, your feature will be merged.
-
----
-
-## Tests:
-  
----
-## Authors and Acknowledgments
-  undefined
----
-## Contact Information:
-* GitHub Username: dhuw
-* GitHub Email: hazlewood.dyl@gmail.com
-  

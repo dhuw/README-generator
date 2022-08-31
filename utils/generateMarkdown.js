@@ -23,78 +23,40 @@ function licenseBadge(data) {
 function generateMarkdown(data) {
   return `
   
-# ${data.title}
-  ${data.description}
-  ${data.licenseBadge}
-  [A deployed version can be viewed here.](${data.URL})
+  <h1 align="center">${data.projectTitle} 👋</h1>
   
----
-## Contents
-A. [About](#about)
-    1. [User Story](#user%20story)
-    2. [Acceptance criteria](#acceptance%20criteria)
-    3. [Visuals](#visuals)
-    4. [Build](#build)
-B. [Installation](#installation)
-    1. [License](#license)
-    2. [Contributing](#contributing)
-    3. [Tests](#tests)
-    4. [Authors and acknowledgment](#authors%20and%20acknowledgment)
-    ---
-    ## About
-      ${data.about}
-    ---
-    ## User Story
-      
-    ---
-    ## Acceptance Criteria
-      
-      
-    ---
-    ## Visuals:
-
-    ![]()
----
-## Installation:
-  ${data.installation}
-  To clone the repo:
-  
-      git clone ${data.clone}
-  
----
-
-## License
-  License used for this project - ${licenseBadge.data}
-  * For more information on license types, please reference this website
-  for additional licensing information - [https: //choosealicense.com/](https://choosealicense.com/).
-
----
-
-## Contributing:
-  
-  To contribute to this application, create a pull request.
-  Here are the steps needed for doing that:
-  - Fork the repo
-  - Create a feature branch (git checkout -b NAME-HERE)
-  - Commit your new feature (git commit -m 'Add some feature')
-  - Push your branch (git push)
-  - Create a new Pull Request
-  Following a code review, your feature will be merged.
-
----
-
-## Tests:
-  ${data.test}
----
-## Authors and Acknowledgments
-  ${data.author}
----
-## Contact Information:
-* GitHub Username: ${data.userName}
-* GitHub Email: ${data.userEmail}
-  
-`;
-}
+  ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)<br />
+  ## Description
+  🔍 ${data.description}
+  ## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+  ## Installation
+  💾 ${data.installation}
+  ## Usage
+  💻 ${data.usage}
+  ## License
+  ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)
+  <br />
+  This application is covered by the ${data.license} license. 
+  ## Contributing
+  👪 ${data.contributing}
+  ## Tests
+  ✏️ ${data.tests}
+  ## Questions
+  ✋ ${data.questions}<br />
+  <br />
+  :octocat: Find me on GitHub: [${data.username}](https://github.com/${data.username})<br />
+  <br />
+  ✉️ Email me with any questions: ${data.email}<br /><br />
+  _This README was generated with ❤️ by [README-generator](https://github.com/jpd61/README-generator) 🔥🔥🔥_
+      `;
+    }
 
 
 module.exports = generateMarkdown;

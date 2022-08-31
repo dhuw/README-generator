@@ -1,12 +1,32 @@
+//license badge function
+function licenseBadge(data) {
+  const licenseType = data.license[0];
+  let licenseString = " "
+    if (licenseType === "GNU AGPLv3") {
+      licenseString =  `[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)`;
+    } else if (value === "GNU GPLv3") {
+      licenseString = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
+    } else if (value === "GNU LGPLv3") {
+      licenseString = `[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)`;
+    } else if (value === "Mozilla") {
+      licenseString = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
+    } else if (value === "MIT") {
+      licenseString = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+    } else if (value === "Apache") {
+      licenseString = `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+    } else {
+      licenseString = `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`;
+    } return licenseString
+}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(answers) {
+function generateMarkdown(data) {
   return `
   
-# ${answers.title}
-  ${answers.description}
-  ${answers.licenseBadge}
-  [A deployed version can be viewed here.](${answers.URL})
+# ${data.title}
+  ${data.description}
+  ${data.licenseBadge}
+  [A deployed version can be viewed here.](${data.URL})
   
 ---
 ## Contents
@@ -22,7 +42,7 @@ function generateMarkdown(answers) {
     6. [Authors and acknowledgment](#authors%20and%20acknowledgment)
     ---
     ## About
-      ${answers.about}
+      ${data.about}
     ---
     ## User Story
       
@@ -36,15 +56,15 @@ function generateMarkdown(answers) {
     ![]()
 ---
 ## Installation:
-  ${answers.installation}
+  ${data.installation}
   To clone the repo:
   
-      git clone ${answers.clone}
+      git clone ${data.clone}
   
 ---
 
 ## License
-  License used for this project - ${answers.license}
+  License used for this project - ${licenseBadge.data}
   * For more information on license types, please reference this website
   for additional licensing information - [https: //choosealicense.com/](https://choosealicense.com/).
 
@@ -64,10 +84,10 @@ function generateMarkdown(answers) {
 ---
 
 ## Tests:
-  ${answers.test}
+  ${data.test}
 ---
 ## Authors and Acknowledgments
-  ${answers.author}
+  ${data.author}
 ---
 ## Contact Information:
 * GitHub Username: ${data.userName}
@@ -75,5 +95,6 @@ function generateMarkdown(answers) {
   
 `;
 }
+
 
 module.exports = generateMarkdown;

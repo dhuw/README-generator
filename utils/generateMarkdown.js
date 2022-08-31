@@ -30,16 +30,16 @@ function generateMarkdown(data) {
   
 ---
 ## Contents
-1. [About](#about)
+A. [About](#about)
     1. [User Story](#user%20story)
     2. [Acceptance criteria](#acceptance%20criteria)
     3. [Visuals](#visuals)
     4. [Build](#build)
-2. [Installation](#installation)
-    3. [License](#license)
-    4. [Contributing](#contributing)
-    5. [Tests](#tests)
-    6. [Authors and acknowledgment](#authors%20and%20acknowledgment)
+B. [Installation](#installation)
+    1. [License](#license)
+    2. [Contributing](#contributing)
+    3. [Tests](#tests)
+    4. [Authors and acknowledgment](#authors%20and%20acknowledgment)
     ---
     ## About
       ${data.about}

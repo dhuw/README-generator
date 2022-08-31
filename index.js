@@ -1,82 +1,88 @@
-// Declaring the dependencies and variables
-const fs = require("fs");
-const inquirer = require("inquirer");
-
-//Prompt the user questions to populate the README.md
-   inquirer.prompt([
-      {
-          type: "input",
-          name: "title",
-          message: "What is the title of your project?"
-        },
+function init() {
+  // Declaring the dependencies and variables
+  const fs = require("fs");
+  const inquirer = require("inquirer");
+  const generate = require('./utils/generateMarkdown')
+  const path = require('patch')
+  //Prompt the user questions to populate the README.md
+    inquirer.prompt([
         {
-          type: "input",
-          name: "desc",
-          message: "Use one sentence to describe your project."
-        },
-        {
-          type: "input",
-          name: "about",
-          message: "Tell me more about the project."
-        },
-        {
-          type: "input",
-          name: "about",
-          message: "Tell me more about the project."
-        },
-        {
-          type: "input",
-          name: "install",
-          message: "What are the installation instructions?"
-        },
-        {
-          type: "input",
-          name: "clone",
-          message: "What is the url to clone the repo?"
-        },
-        {
-          type: "list",
-          name: "license",
-          message: "Select the appropiate license.",
-          choices: [
-            "GNU AGPLv3",
-            "GNU GPLv3",
-            "GNU LGPLv3",
-            "Mozilla",
-            "MIT",
-            "Apache",
-            "Boost",
-          ],
-        },
-        {
-          type: "input",
-          name: "test",
-          message: "Enter the testing methods used in the project."
-        },
-        {
-          type: "input",
-          name: "creator",
-          message: "What is your name?"
-        },
-        {
-          type: "input",
-          name: "userName",
-          message: "What is your gitHub username?"
-        },
-        {
-          type: "input",
-          name: "userEmail",
-          message: "What is your email?",
-        },
-        {
-          type: "input",
-          name: "URL",
-          message: "What is the URL of the live site?",
-        },
-        {
-          type: "input",
-          name: "repo",
-          message: "What is the URL of the github repo?",
-        },
-  ]);
-
+            type: "input",
+            name: "title",
+            message: "What is the title of your project?"
+          },
+          {
+            type: "input",
+            name: "desc",
+            message: "Use one sentence to describe your project."
+          },
+          {
+            type: "input",
+            name: "about",
+            message: "Tell me more about the project."
+          },
+          {
+            type: "input",
+            name: "about",
+            message: "Tell me more about the project."
+          },
+          {
+            type: "input",
+            name: "install",
+            message: "What are the installation instructions?"
+          },
+          {
+            type: "input",
+            name: "clone",
+            message: "What is the url to clone the repo?"
+          },
+          {
+            type: "list",
+            name: "license",
+            message: "Select the appropiate license.",
+            choices: [
+              "GNU AGPLv3",
+              "GNU GPLv3",
+              "GNU LGPLv3",
+              "Mozilla",
+              "MIT",
+              "Apache",
+              "Boost",
+            ],
+          },
+          {
+            type: "input",
+            name: "test",
+            message: "Enter the testing methods used in the project."
+          },
+          {
+            type: "input",
+            name: "creator",
+            message: "What is your name?"
+          },
+          {
+            type: "input",
+            name: "userName",
+            message: "What is your gitHub username?"
+          },
+          {
+            type: "input",
+            name: "userEmail",
+            message: "What is your email?",
+          },
+          {
+            type: "input",
+            name: "URL",
+            message: "What is the URL of the live site?",
+          },
+          {
+            type: "input",
+            name: "repo",
+            message: "What is the URL of the github repo?",
+          },
+    ]);
+    .then((response) => {
+      return fs.writeFileSync(path.join (process.cwd(), "README.md"), generate(response));
+    });
+  }
+init();

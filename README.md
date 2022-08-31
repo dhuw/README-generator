@@ -13,6 +13,7 @@
   - [Tests](#tests)
   ## Installation
   💾 npm init npm i inquirer
+  Video Link: 
   ## License
   ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
   <br />

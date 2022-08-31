@@ -3,7 +3,7 @@ function init() {
   const fs = require("fs");
   const inquirer = require("inquirer");
   const generate = require('./utils/generateMarkdown')
-  const path = require('patch')
+  const path = require('path')
   //Prompt the user questions to populate the README.md
     inquirer.prompt([
         {

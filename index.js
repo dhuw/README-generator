@@ -80,7 +80,7 @@ function init() {
             name: "repo",
             message: "What is the URL of the github repo?",
           },
-    ]);
+    ])
     .then((response) => {
       return fs.writeFileSync(path.join (process.cwd(), "README.md"), generate(response));
     });

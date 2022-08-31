@@ -23,11 +23,11 @@ function licenseBadge(data) {
 function generateMarkdown(data) {
   return `
   
-  <h1 align="center">${data.projectTitle} 👋</h1>
+  <h1 align="center">${data.title} 👋</h1>
   
   ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)<br />
   ## Description
-  🔍 ${data.description}
+  🔍 ${data.desc}
   ## Table of Contents
   - [Description](#description)
   - [Installation](#installation)
@@ -37,7 +37,7 @@ function generateMarkdown(data) {
   - [Tests](#tests)
   - [Questions](#questions)
   ## Installation
-  💾 ${data.installation}
+  💾 ${data.install}
   ## Usage
   💻 ${data.usage}
   ## License
@@ -45,15 +45,15 @@ function generateMarkdown(data) {
   <br />
   This application is covered by the ${data.license} license. 
   ## Contributing
-  👪 ${data.contributing}
+  👪 ${data.creator}
   ## Tests
-  ✏️ ${data.tests}
+  ✏️ ${data.test}
   ## Questions
   ✋ ${data.questions}<br />
   <br />
-  :octocat: Find me on GitHub: [${data.username}](https://github.com/${data.username})<br />
+  :octocat: Find me on GitHub: [${data.userName}](https://github.com/${data.userName})<br />
   <br />
-  ✉️ Email me with any questions: ${data.email}<br /><br />
+  ✉️ Email me with any questions: ${data.userEmail}<br /><br />
   _This README was generated with ❤️ by [README-generator](https://github.com/jpd61/README-generator) 🔥🔥🔥_
       `;
     }

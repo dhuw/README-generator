@@ -23,11 +23,6 @@ function init() {
           },
           {
             type: "input",
-            name: "about",
-            message: "Tell me more about the project."
-          },
-          {
-            type: "input",
             name: "install",
             message: "What are the installation instructions?"
           },

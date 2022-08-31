@@ -4,19 +4,15 @@
   
   ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
   ## Description
-  🔍 Uses node.js to generate README files
+  🔍 Uses Node.js along with inquirer to give the user specific question via terminal. Based off the answers given the application makes a specific and licensed README file for your GitHub repo.
   ## Table of Contents
   - [Description](#description)
   - [Installation](#installation)
-  - [Usage](#usage)
   - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
-  - [Questions](#questions)
   ## Installation
-  💾 npm init
-  ## Usage
-  💻 undefined
+  💾 npm init npm i inquirer
   ## License
   ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
   <br />
@@ -25,8 +21,7 @@
   👪 Dylan
   ## Tests
   ✏️ N/A
-  ## Questions
-  ✋ undefined<br />
+  <br />
   <br />
   :octocat: Find me on GitHub: [dhuw](https://github.com/dhuw)<br />
   <br />

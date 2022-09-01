@@ -25,21 +25,17 @@ function generateMarkdown(data) {
   
   <h1 align="center">${data.title} 👋</h1>
   
-  ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)<br />
+  <h3 align="center">![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)</h3><br />
   ## Description
-  🔍 ${data.desc}
+  🔍 ${data.about}
   ## Table of Contents
   - [Description](#description)
   - [Installation](#installation)
-  - [Usage](#usage)
   - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
-  - [Questions](#questions)
   ## Installation
   💾 ${data.install}
-  ## Usage
-  💻 ${data.usage}
   ## License
   ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)
   <br />
@@ -48,10 +44,8 @@ function generateMarkdown(data) {
   👪 ${data.creator}
   ## Tests
   ✏️ ${data.test}
-  ## Questions
-  ✋ ${data.questions}<br />
   <br />
-  :octocat: Find me on GitHub: [${data.userName}](https://github.com/${data.userName})<br />
+  :octocat: Find me on GitHub: [${data.userName}](https://github.com/${data.userame})<br />
   <br />
   ✉️ Email me with any questions: ${data.userEmail}<br /><br />
   _This README was generated with ❤️ by [README-generator](https://github.com/jpd61/README-generator) 🔥🔥🔥_
